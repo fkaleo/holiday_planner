@@ -51,3 +51,34 @@ python manage.py createsuperuser
 ```
 
 Navigate to http://127.0.0.1:8000/admin in your web browser
+
+## API Endpoints
+
+### Destinations API
+
+The application provides a RESTful API for managing travel destinations.
+
+#### Base URL
+
+```
+/api/destinations/
+```
+
+#### Available Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/destinations/` | GET | List all destinations |
+| `/api/destinations/` | POST | Create a new destination |
+| `/api/destinations/{id}/` | GET, PUT, DELETE | Standard CRUD operations for a specific destination |
+
+#### Destination Object
+
+```json
+{
+  "id": 1,
+  "name": "Paris",
+  "latitude": 48.8566,
+  "longitude": 2.3522
+}
+```
