@@ -76,6 +76,6 @@ This will spin up a Docker container with the application running and a Postgres
 ```
 # Build and start the containers
 docker compose up --build
-
-# Access the application at http://127.0.0.1:8000
 ```
+
+Access the application at http://127.0.0.1:8000
