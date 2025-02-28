@@ -26,6 +26,13 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+### Populating the Database
+
+To populate the database with sample data:
+```
+python manage.py shell < planner_api/scripts/populate.py
+```
+
 ### Running the Server
 
 To start the development server:
