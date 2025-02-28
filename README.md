@@ -41,3 +41,13 @@ Run the tests:
 ```
 pytest
 ```
+
+## Adding Content via Django Admin
+
+To access the Django admin interface, you first need to create a superuser account:
+
+```
+python manage.py createsuperuser
+```
+
+Navigate to http://127.0.0.1:8000/admin in your web browser
