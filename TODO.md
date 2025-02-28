@@ -1,0 +1,3 @@
+- write thought process
+- design API
+- implement API and write basic tests
