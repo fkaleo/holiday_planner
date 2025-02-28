@@ -3,10 +3,12 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.request import Request
-from .models import Destination
+from .models import Destination, Trip, TripStop
 from .serializers import (
     DestinationSerializer,
     WeatherDataSerializer,
+    TripSerializer,
+    TripStopSerializer,
 )
 from .weather_service import WeatherService
 
@@ -39,3 +41,19 @@ class DestinationViewSet(viewsets.ModelViewSet):
                 {"error": "Failed to fetch weather data", "detail": str(e)},
                 status=status.HTTP_503_SERVICE_UNAVAILABLE,
             )
+
+
+class TripViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows trips to be viewed or edited.
+    """
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+
+
+class TripStopViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows trip stops to be viewed or edited.
+    """
+    queryset = TripStop.objects.all()
+    serializer_class = TripStopSerializer

@@ -39,7 +39,7 @@ To start the development server:
 python manage.py runserver
 ```
 
-The application will be available at http://127.0.0.1:8000/
+The application will be available at http://127.0.0.1:8000/api/
 
 ## Running Tests
 
@@ -60,43 +60,10 @@ Navigate to http://127.0.0.1:8000/admin in your web browser
 
 ## API Endpoints
 
-### Destinations API
+The Holiday Planner API is built using Django REST Framework and provides the following main resources:
 
-The application provides a RESTful API for managing travel destinations.
+- **Destinations**: Manage travel locations with coordinates
+- **Trips**: Create and manage complete trips with start and end dates
+- **Trip Stops**: Manage individual stops within a trip, including arrival and departure times
 
-#### Base URL
-
-```
-/api/destinations/
-```
-
-#### Available Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/destinations/` | GET | List all destinations |
-| `/api/destinations/` | POST | Create a new destination |
-| `/api/destinations/{id}/` | GET, PUT, DELETE | Standard CRUD operations for a specific destination |
-| `/api/destinations/{id}/weather/` | GET | Get weather data for a specific destination |
-
-#### Destination Object
-
-```json
-{
-  "id": 1,
-  "name": "Paris",
-  "latitude": 48.8566,
-  "longitude": 2.3522
-}
-```
-
-#### Weather Data Response
-
-```json
-{
-  "datetime": "2025-02-28T14:00:00Z",
-  "temperature": 18.5,
-  "conditions": "Partly Cloudy",
-  "precipitation": 0.0
-}
-```
+Each resource supports standard RESTful operations (GET, POST, PUT, DELETE) and follows consistent URL patterns.
