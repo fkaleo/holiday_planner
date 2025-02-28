@@ -7,3 +7,7 @@
 3. Listing objects, the attributes, their relationships and possible actions on them.
 
 4. Scaffolding project (git, python version, poetry, django, etc.)
+
+5. Implementing various API routes with their models, views and serializers
+
+6. Added Docker integration and running with docker compose using PostgreSQL
