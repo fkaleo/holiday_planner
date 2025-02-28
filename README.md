@@ -8,3 +8,10 @@ A Django-based application for planning your holidays with ease.
 - Django
 - Django REST Framework
 - Poetry for dependency management
+
+## Running Tests
+
+Run the tests:
+```
+pytest
+```
