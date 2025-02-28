@@ -11,3 +11,12 @@ class DestinationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Destination
         fields = ["id", "name", "latitude", "longitude"]
+
+
+class WeatherDataSerializer(serializers.Serializer):
+    """Serializer for weather data."""
+
+    datetime = serializers.DateTimeField()
+    temperature = serializers.FloatField()
+    conditions = serializers.CharField()
+    precipitation = serializers.FloatField()

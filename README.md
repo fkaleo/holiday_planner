@@ -71,6 +71,7 @@ The application provides a RESTful API for managing travel destinations.
 | `/api/destinations/` | GET | List all destinations |
 | `/api/destinations/` | POST | Create a new destination |
 | `/api/destinations/{id}/` | GET, PUT, DELETE | Standard CRUD operations for a specific destination |
+| `/api/destinations/{id}/weather/` | GET | Get weather data for a specific destination |
 
 #### Destination Object
 
@@ -80,5 +81,16 @@ The application provides a RESTful API for managing travel destinations.
   "name": "Paris",
   "latitude": 48.8566,
   "longitude": 2.3522
+}
+```
+
+#### Weather Data Response
+
+```json
+{
+  "datetime": "2025-02-28T14:00:00Z",
+  "temperature": 18.5,
+  "conditions": "Partly Cloudy",
+  "precipitation": 0.0
 }
 ```
