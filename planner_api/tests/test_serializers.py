@@ -27,9 +27,9 @@ def test_create_destination() -> None:
     serializer = DestinationSerializer(data=destination_data)
     assert serializer.is_valid()
     destination = serializer.save()
-    assert destination.name == "Berlin"
-    assert destination.latitude == 52.5200
-    assert destination.longitude == 13.4050
+    assert destination.name == destination_data["name"]
+    assert destination.latitude == destination_data["latitude"]
+    assert destination.longitude == destination_data["longitude"]
 
 
 @pytest.mark.django_db
@@ -39,6 +39,6 @@ def test_update_destination(destination_berlin: Destination) -> None:
     serializer = DestinationSerializer(instance=destination_berlin, data=update_data)
     assert serializer.is_valid()
     destination = serializer.save()
-    assert destination.name == "Updated Berlin"
-    assert destination.latitude == 52.5201
-    assert destination.longitude == 13.4051
+    assert destination.name == update_data["name"]
+    assert destination.latitude == update_data["latitude"]
+    assert destination.longitude == update_data["longitude"]
