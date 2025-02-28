@@ -6,4 +6,4 @@
 
 3. Listing objects, the attributes, their relationships and possible actions on them.
 
-4. Scaffolding project
+4. Scaffolding project (git, python version, poetry, django, etc.)
