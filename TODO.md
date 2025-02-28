@@ -3,4 +3,4 @@
 - use of secrets
 - add authentication mechanism
 - caching of calls to open-meteo API
-- add pytest automatic check for import order and formatinng
+- add pytest automatic check for import order and formatting
