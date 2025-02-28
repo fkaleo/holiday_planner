@@ -22,7 +22,6 @@ poetry install --no-root
 
 To initialize or update your database schema:
 ```
-python manage.py makemigrations
 python manage.py migrate
 ```
 
