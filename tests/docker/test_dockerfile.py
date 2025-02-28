@@ -5,6 +5,9 @@ from typing import List
 
 import os
 
+# Mark all tests in this file with the 'docker' marker
+pytestmark = pytest.mark.docker
+
 
 @pytest.fixture(scope="session")
 def docker_compose_file(pytestconfig: pytest.Config) -> str:
