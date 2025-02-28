@@ -1,0 +1,15 @@
+services:
+  django_test:
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+    ports:
+      - "8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=holiday_planner.settings
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/admin/" ]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
