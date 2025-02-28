@@ -1,7 +1,6 @@
 import pytest
 from planner_api.models import Destination
 from planner_api.serializers import DestinationSerializer
-from rest_framework.test import APIClient
 
 
 @pytest.fixture
