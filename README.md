@@ -67,3 +67,15 @@ The Holiday Planner API is built using Django REST Framework and provides the fo
 - **Trip Stops**: Manage individual stops within a trip, including arrival and departure times
 
 Each resource supports standard RESTful operations (GET, POST, PUT, DELETE) and follows consistent URL patterns.
+
+
+## Running with Docker
+
+This will spin up a Docker container with the application running and a Postgres database.
+
+```
+# Build and start the containers
+docker compose up --build
+
+# Access the application at http://127.0.0.1:8000
+```

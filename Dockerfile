@@ -4,6 +4,7 @@ FROM python:3.13.2-slim-bookworm
 ENV PYTHONUNBUFFERED=1
 ENV POETRY_NO_INTERACTION=1
 ENV POETRY_VIRTUALENVS_CREATE=false
+ENV DJANGO_SETTINGS_MODULE=holiday_planner.settings_docker
 
 # Install system dependencies
 RUN apt-get update
