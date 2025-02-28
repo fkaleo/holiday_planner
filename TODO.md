@@ -2,3 +2,4 @@
 - design API
 - implement API and write basic tests
 - add README.md
+- Dockerize
